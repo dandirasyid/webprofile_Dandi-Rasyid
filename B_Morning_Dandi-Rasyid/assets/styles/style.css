@@ -72,12 +72,11 @@ main{
     justify-content: space-between;
     align-items: center;
     padding: 0 8em 5em 8em;
-    margin-bottom: 5em;
 }
 
 .hero-left{
     max-width: 600px;
-    margin-right: 1em;
+    margin-right: 25px;
 }
 
 .title-hero-name{
@@ -98,7 +97,7 @@ main{
     animation: heroLeft 1.1s ease forwards;
 }
 
-.description{
+.description-hero{
     font-size: 16px;
     color: #ffffff;
     margin: 1em 0 1.5em 0;
@@ -107,7 +106,7 @@ main{
 }
 
 .button{
-    width: 150px;
+    width: 100px;
     height: 50px;
     border: none;
     border-radius: 10px;
@@ -130,29 +129,212 @@ main{
 
 .button:hover{
     color: #ffffff;
+    top: -5px;
 }
 
 .hero-right{
     max-width: 600px;
-    margin-right: 2em;
 }
 
 .hero-right .color-circle{
-    width: 410px;
-    height: 410px;
+    width: 400px;
+    height: 400px;
     background: linear-gradient(35deg, #00ffca, #05bfdb, #00ffca);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: heroRight 2.5s ease forwards;
+    box-shadow: 0px 5px 20px 0 #05bfdb;
+    animation: bounce 2.3s alternate infinite;
 }
 
 .hero-image{
     border-radius: 50%;
-    width: 390px;
-    height: 390px;
+    width: 380px;
+    height: 380px;
 }
+
+/* about */
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8em 5em 8em;
+}
+
+.about-left{
+    max-width: 600px;
+    margin-right: 25px;
+}
+
+.about-left .color-circle{
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(35deg, #00ffca, #05bfdb, #00ffca);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 20px 0 #05bfdb;
+    animation: bounce 2.3s alternate infinite;
+}
+
+.about-image{
+    border-radius: 50%;
+    width: 380px;
+    height: 380px;
+}
+
+
+.about-right{
+    max-width: 600px;
+}
+
+.title-about{
+    font-size: 42px;
+    color: #00ffca;
+    animation: aboutRight 1s ease forwards;
+    margin-bottom: 0.5em;
+}
+
+.description-about{
+    font-size: 16px;
+    color: #ffffff;
+    margin: 1em 0 1.5em 0;
+    line-height: 25px;
+    animation: aboutRight 1.2s ease forwards;
+}
+
+/* skills */
+.skills{
+    padding: 0 8em 5em 8em;
+    text-align: center;
+}
+
+.skills-title{
+    color: #00ffca;
+    font-size: 42px;
+    text-align: center;
+}
+
+.skills-description{
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.boxs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boxs .box{
+    width: 30%;
+    padding: 35px 20px;
+    border: 2px solid #00ffca;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px 0 #05bfdb;
+    margin: 0 15px 25px 0;
+    position: relative;
+    top: 0;
+}
+
+.boxs .box:hover{
+    top: -10px;
+}
+
+.title-box{
+    color: #00ffca;
+    padding-bottom: 15px;
+}
+
+.description-box{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+/* portofolio */
+.portofolio-title{
+    color: #00ffca;
+    font-size: 42px;
+    text-align: center;
+}
+
+.portofolio-description{
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* portofolio */
+.portofolio{
+    padding: 0 8em 5em 8em;
+    text-align: center;
+}
+
+.porto-boxs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.porto-boxs .porto-box{
+    width: 46%;
+    border: 2px solid #00ffca;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px 0 #05bfdb;
+    margin: 0 15px 25px 0;
+    position: relative;
+    top: 0;
+}
+
+.portofolio .porto-boxs .porto-box{
+    position: relative;
+    overflow: hidden;
+}
+
+.portofolio .porto-boxs .porto-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.portofolio .porto-boxs .porto-box:hover img{
+    transform: scale(1.4);
+    rotate: -2deg;
+    transition: 0.5s ease-out;
+}
+
+.portofolio .porto-boxs .porto-box .box-hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000004D;
+    z-index: 3;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.portofolio .porto-boxs .porto-box:hover .box-hover{
+    opacity: 1;
+}
+
+.portofolio .porto-boxs .porto-box .box-hover span{
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
 
 /* animation */
 @keyframes navbar{
@@ -173,7 +355,7 @@ main{
     }
     100%{
         opacity: 1;
-        transform: translateY();
+        transform: translateY(0);
     }
 }
 
@@ -184,12 +366,120 @@ main{
     }
     100%{
         opacity: 1;
-        transform: translateY();
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes aboutRight{
+    0%{
+        opacity: 0;
+        transform: translatex(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 /* media query */
-@media (max-width: 768px){
+@media screen and (max-width: 1024px) {
+    /* skills */
+    .skills{
+        padding: 0 10px 50px 10px;
+    }
+
+    .boxs .box{
+        width: 40%;
+    }
+
+    .portofolio{
+        padding: 0 25px 50px 25px;
+    }
+
+    .porto-boxs .porto-boxs{
+        width: 46%;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+     /* hero */
+     .hero{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em 5em 2em;
+    }
+
+    .hero-left{
+        margin-bottom: 3em;
+        text-align: center;
+    }
+
+    .hero-right .color-circle{
+        width: 330px;
+        height: 330px;
+    }
+    
+    .hero-image{
+        border-radius: 50%;
+        width: 310px;
+        height: 310px;
+    }
+
+    /* about */
+    .about{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em 2em 2em;
+    }
+
+    .about-right{
+        margin-bottom: 3em;
+        text-align: center;
+    }
+
+    .about-left{
+        margin-bottom: 1em;
+    }
+
+    .about-left .color-circle{
+        width: 330px;
+        height: 330px;
+    }
+    
+    .about-image{
+        border-radius: 50%;
+        width: 310px;
+        height: 310px;
+    }
+
+    .portofolio{
+        padding: 0 5em 0 5em;
+    }
+
+    .porto-boxs{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .porto-boxs .porto-box{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
     .check-button{
         display: inline-flex;
     }
@@ -221,7 +511,7 @@ main{
     .nav-list{
         padding: 0.5em 3.8em;
         position: absolute;
-        top: 12%;
+        top: 15%;
         left: 0;
         height: 0;
         width: 100%;
@@ -245,5 +535,201 @@ main{
         border-bottom: 2px solid #00ffca;
         transition: .5s;
     }
+
+    /* hero */
+    .hero{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em 5em 2em;
+    }
+
+    .hero-left{
+        margin-bottom: 3em;
+        text-align: center;
+    }
+
+    .hero-right .color-circle{
+        width: 330px;
+        height: 330px;
+    }
     
+    .hero-image{
+        border-radius: 50%;
+        width: 310px;
+        height: 310px;
+    }
+
+    /* about */
+    .about{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em 2em 2em;
+    }
+
+    .about-right{
+        text-align: center;
+    }
+
+    .about-left{
+        margin: 1em 1em;
+    }
+
+    .about-left .color-circle{
+        width: 330px;
+        height: 330px;
+    }
+    
+    .about-image{
+        border-radius: 50%;
+        width: 310px;
+        height: 310px;
+    }
+    
+    /* skills */
+    .skills{
+        padding: 0 10px 50px 10px;
+    }
+
+    .boxs .box{
+        width: 40%;
+    }
+
+    /* portofolio */
+    .portofolio{
+        padding: 0 5em 0 5em;
+    }
+
+    .porto-boxs{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .porto-boxs .porto-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .boxs .box{
+        width: 100%;
+    }
+
+    .portofolio{
+        padding: 0 10px 50px 10px;
+    }
+
+    .porto-boxs .porto-box{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+    .boxs{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxs .box{
+        width: 100%;
+    }
+
+    .porto-boxs .porto-box{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    /* nav */
+    nav .check-button{
+        margin-right: 0.5em;
+    }
+
+    /* hero */
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-left{
+        margin-bottom: 3em;
+        text-align: center;
+    }
+
+    .hero-right .color-circle{
+        width: 280px;
+        height: 280px;
+        background: linear-gradient(35deg, #00ffca, #05bfdb, #00ffca);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 2.3s alternate infinite;
+    }
+    
+    .hero-image{
+        border-radius: 50%;
+        width: 260px;
+        height: 260px;
+    }
+
+    /* about */
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-left{
+        margin: 1em 1em;
+    }
+
+    .about-right{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .about-left .color-circle{
+        width: 280px;
+        height: 280px;
+        background: linear-gradient(35deg, #00ffca, #05bfdb, #00ffca);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 2.3s alternate infinite;
+    }
+    
+    .about-image{
+        border-radius: 50%;
+        width: 260px;
+        height: 260px;
+    }
+
+    .boxs{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxs .box{
+        width: 100%;
+    }
+    
+    .porto-boxs{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .porto-boxs .porto-box{
+        width: 100%;
+    }
 }
