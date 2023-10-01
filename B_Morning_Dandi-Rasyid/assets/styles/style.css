@@ -114,6 +114,7 @@ main{
     background: linear-gradient(35deg, #00ffca, #05bfdb, #00ffca);
     position: relative;
     animation: heroLeft 1.3s ease forwards;
+    cursor: pointer;
 }
 
 .button::before{
@@ -215,6 +216,7 @@ main{
     color: #00ffca;
     font-size: 42px;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 
 .skills-description{
@@ -262,6 +264,7 @@ main{
     color: #00ffca;
     font-size: 42px;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 
 .portofolio-description{
@@ -334,7 +337,66 @@ main{
     font-weight: bold;
 }
 
+/* contact */
+.title-contact{
+    text-align: center;
+    font-size: 42px;
+    color: #00ffca;
+    margin-bottom: 0.5em;
+}
 
+.description-contact{
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.contact form{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+}
+
+.contact form input{
+    width: 48%;
+    outline: none;
+    font-size: 16px;
+    padding: 15px 10px;
+    border: 2px solid #00ffca;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.contact form textarea{
+    border: 2px solid #00ffca;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.contact form textarea:focus, .contact form input:focus{
+    border-color: #00ffca;
+    box-shadow: 0px 3px 15px 0 #05bfdb;
+}
+
+.contact form button{
+    margin: 40px auto 40px;
+}
+
+/* footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: #00ffca;
+    background-color: #16213E;
+    font-weight: bold;
+}
 
 /* animation */
 @keyframes navbar{
@@ -408,6 +470,10 @@ main{
     .porto-boxs .porto-boxs{
         width: 46%;
     }
+
+    .contact form{
+        width: 60%;
+    }
 }
 
 
@@ -475,6 +541,10 @@ main{
 
     .porto-boxs .porto-box{
         width: 100%;
+    }
+
+    .contact form{
+        width: 70%;
     }
 }
 
@@ -609,6 +679,10 @@ main{
     .porto-boxs .porto-box{
         width: 100%;
     }
+
+    .contact form{
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 690px) {
@@ -622,6 +696,10 @@ main{
 
     .porto-boxs .porto-box{
         width: 100%;
+    }
+
+    .contact form{
+        width: 70%;
     }
 }
 
@@ -639,6 +717,15 @@ main{
     }
 
     .porto-boxs .porto-box{
+        width: 100%;
+    }
+
+    .contact form{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .contact form input{
         width: 100%;
     }
 }
@@ -730,6 +817,16 @@ main{
     }
 
     .porto-boxs .porto-box{
+        width: 100%;
+    }
+
+    
+    .contact form{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .contact form input{
         width: 100%;
     }
 }
